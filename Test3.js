@@ -1,18 +1,11 @@
 //Remove unnecesary objects from an array
 
 function removeUnnecessary(...values){
-    
-    let newValues = [];
-
-    for (let i = 0; i< values.length; i++) {
-        if(values[i] === " " || values[i] === null || values[i] === false || values[i] === 0 || values[i] === undefined){
-            values.splice(i, 2);
-        }
-      newValues += values[i];
-       
-    }
- console.log(newValues);
+  
+    return values.filter(val=>{
+      return val;
+    });
     
 }
 
-removeUnnecessary(" ", null, 23, "Martin ")
+console.log(removeUnnecessary("marto", ' ',null ,undefined, 0 ,23, "Martin "));
